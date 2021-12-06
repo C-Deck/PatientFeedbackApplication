@@ -37,8 +37,8 @@ public class FeedbackService {
 		return info;
 	}
 
-	// Simple get by Id
-	private <T extends BaseObject> T getObjectById(List<T> list, String id) {
+	// Simple get by Id - would be useful to move to Util class
+	protected <T extends BaseObject> T getObjectById(List<T> list, String id) {
 		Optional<T> result = list.stream().filter(obj -> obj.getId().equals(id)).findFirst();
 		
 		return result.get();

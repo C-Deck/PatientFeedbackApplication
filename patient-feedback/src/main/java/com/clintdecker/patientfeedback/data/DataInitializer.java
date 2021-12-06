@@ -16,7 +16,7 @@ import com.clintdecker.patientfeedback.model.Appointment;
 
 // Makeshift DB for this project - load in the data needed
 public class DataInitializer {
-	// JSON file location to load.
+	// JSON file location to load
 	private static String jsonFile = "C:\\Users\\Clint Desktop\\Documents\\TendoInterviewApp\\patient-feedback\\src\\main\\resources\\patient-feedback-raw-data.json";
 	
 	private List<Patient> patients;
