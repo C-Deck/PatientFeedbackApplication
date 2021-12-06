@@ -9,8 +9,10 @@ import PatientResponseApi from './api/PatientResponseApi'
 import './App.css'
 import 'antd/dist/antd.css'
 
+// Default appointmentId to drive the program
 const APPOINTMENT_ID = "be142dc6-93bd-11eb-a8b3-0242ac130003"
 
+// Helper to extract props for the Feedback component
 const getFeedbackProps = (patientInfo: PatientFeedbackInformation) => {
   const patientName = patientInfo.patient.first
   const doctorLastName = patientInfo.doctor.last

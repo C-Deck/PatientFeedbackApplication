@@ -15,6 +15,7 @@ const Summary: React.FC<SummaryProps> = (props: SummaryProps) => {
         <Content>
         <Space>
           <Card title="Patient Feedback Summary">
+          <h2>Thanks again! Here's what we heard:</h2>
           <Card
             type="inner"
             title="Doctor Recommendation"
