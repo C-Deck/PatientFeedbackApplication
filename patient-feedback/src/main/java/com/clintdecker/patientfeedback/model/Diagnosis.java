@@ -1,30 +1,24 @@
 package com.clintdecker.patientfeedback.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
 
-@Entity
-@Table(name = "diagnosis")
-public class Diagnosis {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+//@Entity
+//@Table(name = "diagnosis")
+public class Diagnosis  extends BaseObject {
 	
-	@Column(name = "status")
+	//@Column(name = "status")
     private String status;
 	
-	@Column(name = "appointmentId")
-	private long appointmentId;
+	//@Column(name = "appointmentId")
+	private String appointmentId;
 	
-	@Column(name = "name")
-	private String name;
+	//@Column(name = "description")
+	private String description;
 	
 	public Diagnosis() {
-		//TODO
+		// Empty Constructor - Use get/set methods// Empty Constructor - Use get/set methods
 	}
 
 	public String getStatus() {
@@ -35,19 +29,19 @@ public class Diagnosis {
 		this.status = status;
 	}
 
-	public long getAppointmentId() {
+	public String getAppointmentId() {
 		return appointmentId;
 	}
 
-	public void setAppointmentId(long appointmentId) {
+	public void setAppointmentId(String appointmentId) {
 		this.appointmentId = appointmentId;
 	}
 
-	public String getName() {
-		return name;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

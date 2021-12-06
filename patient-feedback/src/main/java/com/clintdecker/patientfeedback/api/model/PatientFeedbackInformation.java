@@ -1,6 +1,8 @@
 package com.clintdecker.patientfeedback.api.model;
 
-import com.clintdecker.patientfeedback.model.*;
+import com.clintdecker.patientfeedback.model.Patient;
+import com.clintdecker.patientfeedback.model.Diagnosis;
+import com.clintdecker.patientfeedback.model.Doctor;
 
 public class PatientFeedbackInformation {
 	private Patient patient;

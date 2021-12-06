@@ -1,11 +1,18 @@
-import { UserResponse } from "../../../types/User"
+import { Diagnosis } from "./Diagnosis"
+import { Doctor, Patient, UserResponse } from "./User"
 
 export type FeedbackProps = {
-  patientName: string,
-  doctorLastName: string,
-  diagnosis: string,
+  patientName: string
+  doctorLastName: string
+  diagnosis: string
+  hasSubmitted: boolean
   currentResponse?: UserResponse
   reportUserResponse(userReponse: UserResponse): void
+  onReview(): void
 }
 
-export type DiagnosisResponse = "Yes" | "No"
+export type PatientFeedbackInformation = {
+  patient: Patient
+  doctor: Doctor
+  diagnosis: Diagnosis
+}

@@ -1,19 +1,19 @@
 export type Diagnosis = {
   id: string,
-  // I am not completely sure what all could be in meta - use any for now
-  meta: Record<string, any>,
   status: DiagnosisStatus,
-  code: DiagnosisCode,
+  description: string,
   appointmentId: string
 }
 
 // I would prefer to do hard typing here, but I don't know all the possible values
 export type DiagnosisStatus = "final" | string
 
+// Unused - built based on JSON
 export type DiagnosisCode = {
   coding: Coding[]
 }
 
+// Unused - built based on JSON
 export type Coding = {
   system: string,
   code: string,

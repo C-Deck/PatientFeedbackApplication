@@ -2,7 +2,7 @@ import React from 'react'
 import { Space, Card, Button, Layout } from 'antd'
 import { SummaryProps } from '../types/SummaryTypes'
 
-const { Header, Content, Footer } = Layout
+const { Content, Footer } = Layout
 
 const cardStyle = {
   marginTop: 10
@@ -27,7 +27,7 @@ const Summary: React.FC<SummaryProps> = (props: SummaryProps) => {
             title="Does the Patient Understand the Diagnosis?"
             style={{...cardStyle}}
           >
-            <h1>{props.understandsDiagnosis}</h1> 
+            <h1>{props.understandsDiagnosis ? "Yes" : "No"}</h1> 
           </Card>
           <Card
             type="inner"
@@ -41,7 +41,7 @@ const Summary: React.FC<SummaryProps> = (props: SummaryProps) => {
         </Content>
         <Footer>
           <Space>
-            <Button type="primary">Save</Button>
+            <Button type="primary" onClick={props.onSaveReponse}>Save</Button>
             <Button type="primary" onClick={props.onEditResponse}>Edit</Button>
           </Space>
         </Footer>

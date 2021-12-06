@@ -1,36 +1,33 @@
 package com.clintdecker.patientfeedback.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
 
-@Entity
-@Table(name = "appointment")
-public class Appointment {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+//@Entity
+//@Table(name = "appointment")
+public class Appointment extends BaseObject {
 	
-	@Column(name = "status")
+	//@Column(name = "status")
 	private String status;
 	
-	@Column(name = "subjectId")
-	private long subjectId;
+	//@Column(name = "subjectId")
+	private String subjectId;
 	
-	@Column(name = "actorId")
-	private long actorId;
+	//@Column(name = "actorId")
+	private String actorId;
 	
-	@Column(name = "startDate")
+	//@Column(name = "type")
+	private String type;
+	
+	//@Column(name = "startDate")
 	private String startDate;
 	
-	@Column(name = "endDate")
+	//@Column(name = "endDate")
 	private String endDate;
 	
 	public Appointment() {
-		//TODO
+		// Empty Constructor - Use get/set methods
 	}
 
 	public String getStatus() {
@@ -41,20 +38,28 @@ public class Appointment {
 		this.status = status;
 	}
 
-	public long getSubjectId() {
+	public String getSubjectId() {
 		return subjectId;
 	}
 
-	public void setSubjectId(long subjectId) {
+	public void setSubjectId(String subjectId) {
 		this.subjectId = subjectId;
 	}
 
-	public long getActorId() {
+	public String getActorId() {
 		return actorId;
 	}
 
-	public void setActorId(long actorId) {
+	public void setActorId(String actorId) {
 		this.actorId = actorId;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getStartDate() {

@@ -9,7 +9,7 @@ import javax.persistence.Column;
 @Table(name = "response")
 public class PatientResponse {
 	@Id
-	private long patientId;
+	private String appointmentId;
 
 	@Column(name = "rating")
 	private Integer doctorRecommendation;
@@ -22,5 +22,37 @@ public class PatientResponse {
 	
 	public PatientResponse () {
 		
+	}
+
+	public String getAppointmentId() {
+		return appointmentId;
+	}
+
+	public void setAppointmentId(String appointmentId) {
+		this.appointmentId = appointmentId;
+	}
+
+	public Integer getDoctorRecommendation() {
+		return doctorRecommendation;
+	}
+
+	public void setDoctorRecommendation(Integer doctorRecommendation) {
+		this.doctorRecommendation = doctorRecommendation;
+	}
+
+	public boolean isUnderstandsDiagnosis() {
+		return understandsDiagnosis;
+	}
+
+	public void setUnderstandsDiagnosis(boolean understandsDiagnosis) {
+		this.understandsDiagnosis = understandsDiagnosis;
+	}
+
+	public String getDiagnosisThoughts() {
+		return diagnosisThoughts;
+	}
+
+	public void setDiagnosisThoughts(String diagnosisThoughts) {
+		this.diagnosisThoughts = diagnosisThoughts;
 	}
 }

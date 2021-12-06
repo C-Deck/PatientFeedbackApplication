@@ -1,5 +1,6 @@
-import { UserResponse } from "../../../types/User"
+import { UserResponse } from "./User"
 
 export type SummaryProps = UserResponse & {
   onEditResponse(): void
+  onSaveReponse(): void
 }
