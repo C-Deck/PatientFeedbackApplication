@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Button, Spin } from 'antd'
+import React, { useState, useEffect } from 'react'
+import { Spin } from 'antd'
 import { UserResponse } from './types/User'
 import Feedback from './components/Feedback'
 import Summary from './components/Summary'
@@ -8,13 +8,6 @@ import FeedbackApi from './api/FeedbackApi'
 import PatientResponseApi from './api/PatientResponseApi'
 import './App.css'
 import 'antd/dist/antd.css'
-
-// Used for testing the frontend without the backend "GET"
-const defaultFeedbackProps = {
-  patientName: "Tendo",
-  doctorLastName: "Patrick",
-  diagnosis: "Cancer"
-}
 
 const APPOINTMENT_ID = "be142dc6-93bd-11eb-a8b3-0242ac130003"
 
@@ -86,7 +79,6 @@ const App: React.FC = () => {
         )
          : (<Spin />)
       }
-      <br/>
     </div>
   )
 }
