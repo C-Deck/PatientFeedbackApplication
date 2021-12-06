@@ -13,3 +13,10 @@ Run command: mvn spring-boot:run
 This is a simple webapp using React and Typescript to get feedback on a patient's appointment. It uses Axios to make requests to the backend.
 
 Run command: yarn start
+
+
+### Going forward
+
+Package the frontend up with the backend in Spring boot. This would make it only have to run the "mvn spring-boot:run" command to run both apps.
+
+Add the other Model classes into the database as tables.
