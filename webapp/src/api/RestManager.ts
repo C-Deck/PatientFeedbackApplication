@@ -6,7 +6,7 @@ export class RestManager {
   private baseURL: string
 
   public constructor(controllerURL: string) {
-    const baseURL = `http://localhost:8080/${controllerURL}`
+    const baseURL = `${controllerURL}`
     this.baseURL = baseURL
     this.axiosInstance = Axios.create({ baseURL })
     this.axiosInstance.interceptors.request.use((config) => {
@@ -23,7 +23,6 @@ export class RestManager {
     // Add in any headers that might be needed in the future here
     // None currently needed
     headers["Content-type"] = "application/json"
-    headers["Access-Control-Allow-Origin"] = "*"
 
     return { ...config, headers }
   }
